@@ -3,6 +3,10 @@
 ## Description
 Eat 'n' Drink - Social Food Sharing where people can eat and drink together at home.
 
+You're not at home, you don't want to go to restaurant because you don't love caotic place and you want to know new people?  
+Or you're alone at home, you have a delicious menù and you want to eat it with new people and get the occasion to know them?  
+Awesome! Eat 'n' Drink it's for you! This app let you to find and eat with people around you. And why not, you can invite them to eat in your house!
+
 ## What you will find
  * **Server platform** *(Maybe a README if it's a managed cloud)*
  * **Client platform** *(Hybrid app, ready for production)*
