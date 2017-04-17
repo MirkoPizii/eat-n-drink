@@ -1,14 +1,14 @@
 # Eat 'n' Drink Repository
 
 ## Description
-Eat 'n' Drink - Social Food Sharing where people can eat and drink together at home.
+**Eat 'n' Drink** - Social eating app where people can use it to eat and drink together at home and meet new people.
 
 You're not at home, you don't want to go to restaurant because you don't love chaotic place and you want to know new people?  
 Or you're alone at home, you have a delicious menù and you want to eat it with new people and get the occasion to know them?  
 **Awesome! Eat 'n' Drink is for you!** This app let you to find and eat with people around you. And why not, you can invite them to eat in your house!
 
 ## What you will find
- * **Server platform** *(Maybe a README if it's a managed cloud)*
+ * **Server platform** Firebase service
  * **Client platform** *(Hybrid app, ready for production)*
  * **App descriptions** *(Italian language)*:
    * **App Design**: A detailed description of your app in terms of its information architecture, experience design, UI design.
