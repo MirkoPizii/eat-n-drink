@@ -1,6 +1,6 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
+  "name": "Eat 'n' Drink",
+  "short_name": "Eat 'n' Drink",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
