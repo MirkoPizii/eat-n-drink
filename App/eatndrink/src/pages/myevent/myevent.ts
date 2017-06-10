@@ -1,0 +1,25 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+@IonicPage()
+@Component({
+  selector: 'page-myevent',
+  templateUrl: 'myevent.html',
+})
+export class MyeventPage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  loadMoreEvents() {
+    //ToDo
+  }
+
+  addEventPage() {
+    //ToDo
+  }
+
+  goEventPage(event) {
+    //ToDo
+  }
+}

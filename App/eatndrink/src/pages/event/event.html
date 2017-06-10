@@ -1,0 +1,46 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 text-center align-self-center>
+          <!--<img src="" alt="">-->
+          <ion-icon name="contact" style="font-size:50px;"></ion-icon>
+        </ion-col>
+        <ion-col col-8>
+          <p>Nome<br>Cognome</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="logout()">
+        Logout
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Nearby Events</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="tabs has-tabs-top" scrollbar-y-auto>
+  <ion-tabs tabsPlacement="top">
+    <ion-tab tabTitle="Events" [root]="tab1Root"></ion-tab>
+    <ion-tab tabTitle="My Events" [root]="tab2Root"></ion-tab>
+  </ion-tabs>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-content>
+  <ion-list>
+    <ion-item (click)="goEventPage(event)">
+      <ion-avatar item-start>
+        <img src="https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725550_LsQIhnhtWkmUfJ7XMyFWAjTxtmsdlICx.jpg">
+      </ion-avatar>
+      <h2 class="item-text-wrap">Nome evento</h2>
+      <p>Via indirizzo evento.</p>
+      <button ion-button clear item-end class="event-price">20€</button>
+    </ion-item>
+    <ion-item (click)="goEventPage(event)">
+      <ion-avatar item-start>
+        <img src="https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725550_LsQIhnhtWkmUfJ7XMyFWAjTxtmsdlICx.jpg">
+      </ion-avatar>
+      <h2 class="item-text-wrap">Nome evento</h2>
+      <p>Via indirizzo evento.</p>
+      <button ion-button clear item-end class="event-price">20€</button>
+    </ion-item>
+    <ion-item (click)="goEventPage(event)">
+      <ion-avatar item-start>
+        <img src="https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725550_LsQIhnhtWkmUfJ7XMyFWAjTxtmsdlICx.jpg">
+      </ion-avatar>
+      <h2 class="item-text-wrap">Nome evento</h2>
+      <p>Via indirizzo evento.</p>
+      <button ion-button clear item-end class="event-price">20€</button>
+    </ion-item>
+  </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="loadMoreEvents($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
