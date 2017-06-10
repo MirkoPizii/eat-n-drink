@@ -1,7 +1,7 @@
-<ion-content padding>
+<ion-content padding scrollbar-y-auto>
   <ion-row class="row-center" align-items-center>
     <ion-col>
-      <ion-img src="assets/img/eatndrink_logo.svg" class="app-logo"></ion-img>
+      <img src="assets/img/eatndrink_logo.svg" alt="Eat 'n' Drink Logo" class="app-logo">
     </ion-col>
   </ion-row>
 </ion-content>
@@ -10,7 +10,7 @@
   <ion-toolbar>
     <ion-row>
       <ion-col class="section-login">
-        <button ion-button block class="button-facebook">Accedi con Facebook</button>
+        <button (click)="openPage('EventPage')" ion-button block class="button-facebook">Accedi con Facebook</button>
         <button ion-button block class="button-googleplus">Accedi con Google+</button>
         <button ion-button block class="button-twitter">Accedi con Twitter</button>
       </ion-col>

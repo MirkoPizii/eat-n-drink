@@ -24,11 +24,13 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  primary:     #488aff,
+  secondary:   #32db64,
+  danger:      #f53d3d,
+  light:       #f4f4f4,
+  dark:        #222,
+  dark_violet: #6b00aa,
+  orange:      #f89a00
 );
 
 
@@ -42,7 +44,9 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+$tabs-md-tab-font-weight: bold;
+$tabs-md-tab-text-color: color($colors, dark, base);
+$tabs-md-tab-text-color-active: color($colors, dark_violet, base);
 
 
 
