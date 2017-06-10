@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CreateeventPage } from "../createevent/createevent";
 
 @IonicPage()
 @Component({
@@ -16,7 +17,7 @@ export class MyeventPage {
   }
 
   addEventPage() {
-    //ToDo
+    this.navCtrl.parent.parent.push(CreateeventPage)
   }
 
   goEventPage(event) {

@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { EventlistPage } from "../pages/eventlist/eventlist";
 import { MyeventPage } from "../pages/myevent/myevent";
+import { CreateeventPage } from "../pages/createevent/createevent"
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     EventlistPage,
-    MyeventPage
+    MyeventPage,
+    CreateeventPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { MyeventPage } from "../pages/myevent/myevent";
     MyApp,
     HomePage,
     EventlistPage,
-    MyeventPage
+    MyeventPage,
+    CreateeventPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Create Event</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="event" (submit)="submitEvent()">
+    <ion-item>
+      <ion-label for="name" stacked>Nome evento ~ {{event.controls.name.value.length}}/20</ion-label>
+      <ion-input name="name" formControlName="name" [attr.maxLength]="20" type="text" pattern="[A-Za-z ]*"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="location" stacked>Location</ion-label>
+      <ion-input name="location" formControlName="location" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="price" stacked>Costo partecipazione</ion-label>
+      <ion-input name="price" formControlName="price" type="number" min="1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="vegetarian">Adatto ai vegetariani?</ion-label>
+      <ion-checkbox name="vegetarian" formControlName="vegetarian" item-right></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="vegan">Adatto ai vegani?</ion-label>
+      <ion-checkbox name="vegan" formControlName="vegan" item-right></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="glutenfree">Adatto ai celiaci?</ion-label>
+      <ion-checkbox name="glutenfree" formControlName="glutenfree" item-right></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label for="description" stacked>Descrizione ~ {{event.controls.description.value.length}}/500</ion-label>
+      <ion-textarea name="description" formControlName="description" [attr.maxLength]="500"></ion-textarea>
+    </ion-item>
+
+    <ion-item no-lines>
+      <button ion-button block color="dark_violet" large [disabled]="!event.valid">Submit</button>
+    </ion-item>
+  </form>
+</ion-content>
