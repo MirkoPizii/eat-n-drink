@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, Events } from 'ionic-angular';
 import { HomePage } from "../home/home";
 import { MyeventPage } from "../myevent/myevent";
 import { EventlistPage } from "../eventlist/eventlist";
+import { Storage } from '@ionic/storage';
+import { SearchPage } from "../search/search";
 
 @IonicPage()
 @Component({
@@ -12,17 +14,21 @@ import { EventlistPage } from "../eventlist/eventlist";
 export class EventPage {
   tab1Root = EventlistPage;
   tab2Root = MyeventPage;
+  user: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, public storage: Storage, public eventsCtrl: Events) {
+    this.user = storage.get('user').then((value) => this.user = value);
   }
 
   logout() {
-    //ToDo
-    // Temporary go to initial page
-    this.navCtrl.setRoot(HomePage);
+    this.storage.remove('user')
+      .then(() => {
+        this.navCtrl.setRoot(HomePage);
+        this.eventsCtrl.publish('user:logout');
+      });
   }
 
   openSearch() {
-    //ToDo
+    this.navCtrl.push(SearchPage);
   }
 }

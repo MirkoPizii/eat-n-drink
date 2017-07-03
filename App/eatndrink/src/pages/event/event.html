@@ -3,11 +3,10 @@
     <ion-grid>
       <ion-row>
         <ion-col col-4 text-center align-self-center>
-          <!--<img src="" alt="">-->
-          <ion-icon name="contact" style="font-size:50px;"></ion-icon>
+          <img class="img-circle" src="{{ user.photoURL }}" alt="{{ user.displayName}} avatar">
         </ion-col>
         <ion-col col-8>
-          <p>Nome<br>Cognome</p>
+          <p>{{ user.displayName }}<br>{{ user.email}}</p>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -28,7 +27,7 @@
     <button ion-button menuToggle icon-only>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Nearby Events</ion-title>
+    <ion-title>{{ 'NEARBY_EVENT_TITLE' | translate }}</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="openSearch()">
         <ion-icon name="search"></ion-icon>
@@ -40,7 +39,7 @@
 
 <ion-content class="tabs has-tabs-top" scrollbar-y-auto>
   <ion-tabs tabsPlacement="top">
-    <ion-tab tabTitle="Events" [root]="tab1Root"></ion-tab>
-    <ion-tab tabTitle="My Events" [root]="tab2Root"></ion-tab>
+    <ion-tab tabTitle="{{ 'EVENTS_TITLE' | translate }}" [root]="tab1Root"></ion-tab>
+    <ion-tab tabTitle="{{ 'MY_EVENTS_TITLE' | translate }}" [root]="tab2Root"></ion-tab>
   </ion-tabs>
 </ion-content>

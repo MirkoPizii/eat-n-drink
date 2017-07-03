@@ -1,37 +1,15 @@
 <ion-content>
-  <ion-list>
-    <ion-item (click)="goEventPage(event)">
-      <ion-avatar item-start>
-        <img src="https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725550_LsQIhnhtWkmUfJ7XMyFWAjTxtmsdlICx.jpg">
-      </ion-avatar>
-      <h2 class="item-text-wrap">Nome evento</h2>
-      <p>Via indirizzo evento.</p>
-      <button ion-button clear item-end class="event-price">30€</button>
-    </ion-item>
-    <ion-item (click)="goEventPage(event)">
-      <ion-avatar item-start>
-        <img src="https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725550_LsQIhnhtWkmUfJ7XMyFWAjTxtmsdlICx.jpg">
-      </ion-avatar>
-      <h2 class="item-text-wrap">Nome evento</h2>
-      <p>Via indirizzo evento.</p>
-      <button ion-button clear item-end class="event-price">30€</button>
-    </ion-item>
-    <ion-item (click)="goEventPage(event)">
-      <ion-avatar item-start>
-        <img src="https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725550_LsQIhnhtWkmUfJ7XMyFWAjTxtmsdlICx.jpg">
-      </ion-avatar>
-      <h2 class="item-text-wrap">Nome evento</h2>
-      <p>Via indirizzo evento.</p>
-      <button ion-button clear item-end class="event-price">30€</button>
-    </ion-item>
-  </ion-list>
-
-  <ion-infinite-scroll (ionInfinite)="loadMoreEvents($event)">
-    <ion-infinite-scroll-content
-      loadingSpinner="bubbles"
-      loadingText="Loading...">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
+    <ion-item-group>
+      <ion-item-divider color="light">{{ 'YOUR_LAST_30_EVENTS' | translate }}</ion-item-divider>
+      <ion-item *ngIf="myevents?.length == 0">{{ 'NO_ACTIVITY_FOUND' | translate }}</ion-item>
+      <ion-item (click)="goEventPage(myevent.event_id, myevent.user_uid_token)" *ngFor="let myevent of myevents">
+        <ion-avatar item-start>
+          <img src="{{ myevent.photoURL }}">
+        </ion-avatar>
+        <h2 class="item-text-wrap">{{ myevent.name }}</h2>
+        <button ion-button clear item-end class="event-price">{{ myevent.price }}€</button>
+      </ion-item>
+    </ion-item-group>
 
   <ion-fab bottom right (click)="addEventPage()">
     <button ion-fab class="add-fab"><ion-icon name="add"></ion-icon></button>

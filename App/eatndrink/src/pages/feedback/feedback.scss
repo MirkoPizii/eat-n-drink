@@ -1,0 +1,46 @@
+page-feedback {
+  ion-content {
+
+    h3 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.content {
+      div.scroll-content {
+        top: 37%;
+        left: 20%;
+        width: 60%;
+        height: 26%;
+        overflow: hidden;
+      }
+    }
+
+    &.content-md {
+      background-color: rgba(0, 0, 0, 0.5);
+
+      div.scroll-content {
+        background-color: #fafafa;
+        border-radius: 2px;
+        box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
+        padding: 24px;
+      }
+    }
+
+    .staricon {
+      font-size: 2.5rem;
+      margin-right: 5px;
+    }
+
+    .rating-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .button-submit {
+      background-color: color($colors, dark_violet, base);
+      font-weight: bold;
+      padding: 2rem 0;
+    }
+  }
+}

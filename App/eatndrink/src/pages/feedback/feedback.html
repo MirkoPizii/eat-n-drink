@@ -1,0 +1,13 @@
+<ion-content padding scrollbar-y-auto>
+  <h3 text-center>{{ to_user_name }}</h3>
+
+  <div text-center class="rating-section">
+    <ion-icon (click)="changeRating(1)" class="staricon" [name]="rating >= 1 ? 'star' : 'star-outline'"></ion-icon>
+    <ion-icon (click)="changeRating(2)" class="staricon" [name]="rating >= 2 ? 'star' : 'star-outline'"></ion-icon>
+    <ion-icon (click)="changeRating(3)" class="staricon" [name]="rating >= 3 ? 'star' : 'star-outline'"></ion-icon>
+    <ion-icon (click)="changeRating(4)" class="staricon" [name]="rating >= 4 ? 'star' : 'star-outline'"></ion-icon>
+    <ion-icon (click)="changeRating(5)" class="staricon" [name]="rating >= 5 ? 'star' : 'star-outline'"></ion-icon>
+  </div>
+
+  <button [disabled]="submitted" (click)="submitFeedback()" ion-button block class="button-submit">{{ 'SUBMIT_BUTTON' | translate }}</button>
+</ion-content>

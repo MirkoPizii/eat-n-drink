@@ -1,0 +1,21 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'EVENT_TITLE' | translate }}</ion-title>
+    <ion-buttons end *ngIf="owner">
+      <button ion-button icon-only (click)="editEvent()">
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="tabs has-tabs-top" scrollbar-y-auto>
+  <ion-tabs tabsPlacement="top">
+    <ion-tab tabTitle="{{ 'DETAILS_TITLE' | translate }}" [root]="tab1Root" [rootParams]="tab1Params"></ion-tab>
+    <ion-tab tabTitle="{{ 'ATTENDEES_TITLE' | translate }}" [root]="tab2Root" [rootParams]="tab1Params"></ion-tab>
+  </ion-tabs>
+</ion-content>

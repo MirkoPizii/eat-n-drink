@@ -1,0 +1,5 @@
+page-eventdetails {
+  .tab-button[aria-selected=true] {
+    border-bottom: 3px solid color($colors, dark_violet, base);
+  }
+}

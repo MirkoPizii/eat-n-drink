@@ -1,0 +1,41 @@
+page-attendeevent {
+  .staricon {
+    margin-right: 5px;
+  }
+  .starouticon {
+    margin-right: 5px;
+  }
+  .button-request {
+    background-color: color($colors, dark_violet, base);
+    padding: 3rem 0;
+    font-weight: bold;
+  }
+  .button-accepted {
+    background-color: green;
+    padding: 3rem 0;
+    font-weight: bold;
+  }
+  .btn-attendee {
+    background: transparent;
+    color: #000000;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin: 0 1rem !important;
+
+    .button-inner {
+      font-size: 2rem;
+      font-weight: bold !important;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+  }
+  .button-naviga {
+    background-color: color($colors, orange, base);
+    padding: 3rem 0;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}

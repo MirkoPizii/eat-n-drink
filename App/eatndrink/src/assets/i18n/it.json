@@ -1,0 +1,52 @@
+{
+  "ATTENDEE_REQUEST_TITLE": "Richieste",
+  "ATTENDEE_NO_REQUEST": "Non ci sono richieste :-(",
+  "CLOSE_REQUESTS_BUTTON": "CHIUDI RICHIESTE",
+  "OPEN_REQUESTS_BUTTON": "APRI RICHIESTE",
+  "SEND_REQUEST_BUTTON": "INVIA RICHIESTA",
+  "REQUEST_SENT_BUTTON": "RICHIESTA INVIATA",
+  "ATTENDEE_NAVIGATE_BUTTON": "NAVIGA",
+
+  "CREATE_EVENT_TITLE": "Crea Evento",
+  "MODIFY_EVENT_TITLE": "Modifica Evento",
+  "NAME_EVENT_FORM": "Nome evento",
+  "PRICE_EVENT_FORM": "Costo partecipazione",
+  "VEGETARIAN_OK_FORM": "Adatto ai vegetariani?",
+  "VEGAN_OK_FORM": "Adatto ai vegani?",
+  "GLUTEN_OK_FORM": "Adatto ai celiaci?",
+  "DESCRIPTION_FORM": "Descrizione",
+  "SUBMIT_BUTTON": "INVIA",
+
+  "NEARBY_EVENT_TITLE": "Eventi Vicini",
+  "EVENTS_TITLE": "Eventi",
+  "MY_EVENTS_TITLE": "Miei Eventi",
+
+  "EVENT_TITLE": "Evento",
+  "DETAILS_TITLE": "Dettagli",
+  "ATTENDEES_TITLE": "Partecipanti",
+
+  "NO_EVENT_FOUND": "Non ci sono eventi :-(",
+
+  "LOGIN_TITLE_FACEBOOK": "Accedi con Facebook",
+  "LOGIN_TITLE_GOOGLE": "Accedi con Google+",
+  "LOGIN_TITLE_TWITTER": "Accedi con Twitter",
+
+  "YOUR_LAST_30_EVENTS": "I tuoi ultimi 30 eventi",
+  "NO_ACTIVITY_FOUND": "Nessuna attività trovata :-(",
+
+  "ADVANCED_SEARCH_TITLE": "Ricerca Avanzata",
+  "RANGE_KM_NEARBY_EVENTS": "Raggio eventi nei dintorni (KM)",
+  "ASK_VEGETARIAN_FORM": "Sei vegetariano?",
+  "ASK_VEGAN_FORM": "Sei vegano?",
+  "ASK_GLUTEN_FORM": "Sei celiaco?",
+
+  "LIST_EVENTS_TITLE": "Lista Eventi",
+
+  "AVAILABLE_FOR": "Adatto per:",
+  "VEGETARIAN_TITLE": "Vegetariani",
+  "VEGAN_TITLE": "Vegani",
+  "GLUTEN_TITLE": "Celiaci",
+
+  "USER_EXISTS_TITLE": "Errore",
+  "USER_EXISTS_MESSAGE": "E' stato trovato un account con lo stesso indirizzo email."
+}

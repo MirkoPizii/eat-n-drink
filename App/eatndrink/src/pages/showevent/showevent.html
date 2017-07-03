@@ -1,0 +1,55 @@
+<ion-content>
+  <div #map id="map" style="width:100%; height:40%;"></div>
+
+  <ion-card>
+    <ion-item no-border>
+      <h2 class="item-text-wrap"><strong>{{ event?.name }}</strong></h2>
+      <button ion-button clear item-end class="event-price">{{ event?.price }}€</button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngIf="event?.vegetarian == 1 || event?.vegan == 1 || event?.glutenfree == 1">
+    <ion-card-header>
+      <strong>{{ 'AVAILABLE_FOR' | translate }}</strong>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <button [ngStyle]="event?.vegetarian == 0 ? {'color': 'red', 'font-weight': '200'} : {'color': 'green', 'font-weight': 'bold'}" ion-item>
+          <ion-icon name="arrow-forward" item-start></ion-icon>
+          {{ 'VEGETARIAN_TITLE' | translate }}
+        </button>
+
+        <button [ngStyle]="event?.vegan == 0 ? {'color': 'red', 'font-weight': '200'} : {'color': 'green', 'font-weight': 'bold'}" ion-item>
+          <ion-icon name="arrow-forward" item-start></ion-icon>
+          {{ 'VEGAN_TITLE' | translate }}
+        </button>
+
+        <button [ngStyle]="event?.glutenfree == 0 ? {'color': 'red', 'font-weight': '200'} : {'color': 'green', 'font-weight': 'bold'}" ion-item>
+          <ion-icon name="arrow-forward" item-start></ion-icon>
+          {{ 'GLUTEN_TITLE' | translate }}
+        </button>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <strong>{{ 'DESCRIPTION_FORM' | translate }}:</strong>
+    </ion-card-header>
+
+    <ion-card-content [innerHTML]="event?.description">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{ event?.user.photoURL }}">
+      </ion-avatar>
+      <h2 class="no-wrap">{{ event?.user.displayName }}</h2>
+      <ion-icon class="staricon" *ngFor="let star of event?.rating | looparray:'full'" name="star"></ion-icon><ion-icon class="starouticon" *ngFor="let star_outline of event?.rating | looparray:'outline'" name="star-outline"></ion-icon>
+    </ion-item>
+  </ion-card>
+</ion-content>

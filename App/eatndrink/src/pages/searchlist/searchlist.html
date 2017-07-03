@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ 'LIST_EVENTS_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngIf="events?.length == 0">{{ 'NO_EVENT_FOUND' | translate }}</ion-item>
+    <ion-item (click)="goEventPage(event.id, event.uid_token)" *ngFor="let event of events">
+      <ion-avatar item-start>
+        <img src="{{ event.photoURL }}">
+      </ion-avatar>
+      <h2 class="item-text-wrap">{{ event.name }}</h2>
+      <button ion-button clear item-end class="event-price">{{ event.price }}€</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

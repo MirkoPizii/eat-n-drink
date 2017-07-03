@@ -1,0 +1,19 @@
+page-showevent {
+  .button-inner {
+    color: color($colors, dark, base);
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  .staricon {
+    margin-right: 5px;
+  }
+  .starouticon {
+    margin-right: 5px;
+  }
+
+  .no-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

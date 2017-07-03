@@ -1,0 +1,51 @@
+<ion-content>
+  <ion-list>
+    <ion-item (click)="goFeedbackPage(attendee_confirmed.user)" *ngFor="let attendee_confirmed of attendees_confirmed">
+      <ion-avatar item-start>
+        <img src="{{ attendee_confirmed.user.photoURL }}">
+      </ion-avatar>
+      <h2 class="item-text-wrap">{{ attendee_confirmed.user.displayName }}</h2>
+      <ion-icon class="staricon" *ngFor="let star of attendee_confirmed.user.rating | looparray:'full'" name="star"></ion-icon><ion-icon class="starouticon" *ngFor="let star_outline of attendee_confirmed.user.rating | looparray:'outline'" name="star-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-item-group *ngIf="owner">
+    <ion-item-divider color="light">{{ 'ATTENDEE_REQUEST_TITLE' | translate }}</ion-item-divider>
+    <ion-item *ngIf="request_attendees?.length == 0">{{ 'ATTENDEE_NO_REQUEST' | translate}}</ion-item>
+    <ion-item *ngFor="let request_attendee of request_attendees">
+      <ion-avatar item-start>
+        <img src="{{ request_attendee.user.photoURL }}">
+      </ion-avatar>
+      <h2 class="item-text-wrap">{{ request_attendee.user.displayName }}</h2>
+      <ion-icon class="staricon" *ngFor="let star of request_attendee.user.rating | looparray:'full'" name="star"></ion-icon><ion-icon class="starouticon" *ngFor="let star_outline of request_attendee.user.rating | looparray:'outline'" name="star-outline"></ion-icon>
+      <button ion-button item-end class="btn-attendee" icon-only (click)="acceptAttendee(request_attendee)">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+      <button ion-button item-end class="btn-attendee" icon-only (click)="refuseAttendee(request_attendee)">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-item-group>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col *ngIf="owner && !eventClosed">
+        <button (click)="closeRequest()" ion-button block class="button-request">{{ 'CLOSE_REQUESTS_BUTTON' | translate }}</button>
+      </ion-col>
+      <ion-col *ngIf="owner && eventClosed">
+        <button (click)="closeRequest()" ion-button block class="button-request">{{ 'OPEN_REQUESTS_BUTTON' | translate }}</button>
+      </ion-col>
+      <ion-col *ngIf="!owner && !requestSent && !requestConfirmed">
+        <button (click)="sendRequest()" ion-button block class="button-request">{{ 'SEND_REQUEST_BUTTON' | translate }}</button>
+      </ion-col>
+      <ion-col *ngIf="!owner && requestSent && !requestConfirmed">
+        <button ion-button disabled block class="button-accepted">{{ 'REQUEST_SENT_BUTTON' | translate }}</button>
+      </ion-col>
+      <ion-col *ngIf="!owner && requestConfirmed">
+        <button (click)="naviga()" ion-button block class="button-naviga">{{ 'ATTENDEE_NAVIGATE_BUTTON' | translate }}</button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

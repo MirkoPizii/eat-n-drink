@@ -1,5 +1,10 @@
 page-event {
   .tab-button[aria-selected=true] {
-    border-bottom: 2px solid color($colors, dark_violet, base);
+    border-bottom: 3px solid color($colors, dark_violet, base);
   }
+
+  .img-circle {
+    border-radius: 50%;
+  }
+
 }

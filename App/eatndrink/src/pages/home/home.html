@@ -10,9 +10,9 @@
   <ion-toolbar>
     <ion-row>
       <ion-col class="section-login">
-        <button (click)="openPage('EventPage')" ion-button block class="button-facebook">Accedi con Facebook</button>
-        <button ion-button block class="button-googleplus">Accedi con Google+</button>
-        <button ion-button block class="button-twitter">Accedi con Twitter</button>
+        <button (click)="login('facebook')" ion-button block class="button-facebook">{{ 'LOGIN_TITLE_FACEBOOK' | translate }}</button>
+        <button (click)="login('google')" ion-button block class="button-googleplus">{{ 'LOGIN_TITLE_GOOGLE' | translate }}</button>
+        <button (click)="login('twitter')" ion-button block class="button-twitter">{{ 'LOGIN_TITLE_TWITTER' | translate }}</button>
       </ion-col>
     </ion-row>
   </ion-toolbar>
